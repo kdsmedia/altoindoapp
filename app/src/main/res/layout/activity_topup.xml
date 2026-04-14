@@ -122,7 +122,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cara Pembayaran:\n1. Klik tombol \"SIMPAN QR CODE\".\n2. Buka aplikasi BCA, Dana, Gojek, dll.\n3. Pilih menu Scan / QRIS.\n4. Pilih ikon Galeri dan pilih gambar tadi.\n5. Nominal muncul otomatis, bayar sekarang."
+                android:text="@string/topup_payment_instructions"
                 android:textSize="14sp"
                 android:layout_marginTop="12dp" />
 

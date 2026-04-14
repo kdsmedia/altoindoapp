@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">ALTOINDO</string>
     <string name="welcome_msg">Selamat Datang di Altoindo</string>
+    <string name="topup_payment_instructions">Cara Pembayaran:\n1. Klik tombol &quot;SIMPAN QR CODE&quot;.\n2. Buka aplikasi BCA, Dana, Gojek, dll.\n3. Pilih menu Scan / QRIS.\n4. Pilih ikon Galeri dan pilih gambar tadi.\n5. Nominal muncul otomatis, bayar sekarang.</string>
     <string-array name="account_types">
         <item>E-Wallet</item>
         <item>Bank</item>

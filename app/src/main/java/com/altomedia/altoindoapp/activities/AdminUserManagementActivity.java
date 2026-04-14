@@ -115,7 +115,13 @@ public class AdminUserManagementActivity extends AppCompatActivity {
         builder.setPositiveButton("Simpan", (dialog, which) -> {
             String newName = etName.getText().toString().trim();
             String newEmail = etEmail.getText().toString().trim();
-            long newBalance = Long.parseLong(etBalance.getText().toString().trim());
+            long newBalance;
+            try {
+                newBalance = Long.parseLong(etBalance.getText().toString().trim());
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Saldo tidak valid", Toast.LENGTH_SHORT).show();
+                return;
+            }
             boolean active = Boolean.parseBoolean(etActive.getText().toString().trim());
 
             db.collection("users").document(docId).update(

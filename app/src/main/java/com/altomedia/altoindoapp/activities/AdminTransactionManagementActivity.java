@@ -113,12 +113,12 @@ public class AdminTransactionManagementActivity extends AppCompatActivity {
 
         Button btnAccept = new Button(this);
         btnAccept.setText("Terima");
-        btnAccept.setOnClickListener(v -> updateWithdrawStatus(docId, "approved"));
+        btnAccept.setOnClickListener(v -> updateWithdrawStatus(docId, withdraw.uid, withdraw.amount, "approved"));
         controls.addView(btnAccept);
 
         Button btnReject = new Button(this);
         btnReject.setText("Tolak");
-        btnReject.setOnClickListener(v -> updateWithdrawStatus(docId, "rejected"));
+        btnReject.setOnClickListener(v -> updateWithdrawStatus(docId, withdraw.uid, withdraw.amount, "rejected"));
         controls.addView(btnReject);
 
         parent.addView(controls);
@@ -128,15 +128,33 @@ public class AdminTransactionManagementActivity extends AppCompatActivity {
     private void updateTopupStatus(String docId, String uid, long amount, String status) {
         db.collection("topups").document(docId).update("status", status).addOnSuccessListener(aVoid -> {
             if ("approved".equals(status)) {
-                db.collection("users").document(uid).update("balance_wallet", com.google.firebase.firestore.FieldValue.increment(amount));
+                db.collection("users").document(uid)
+                    .update("balance_wallet", com.google.firebase.firestore.FieldValue.increment(amount));
+                db.collection("transactions").whereEqualTo("id", docId).limit(1).get()
+                    .addOnSuccessListener(snap -> {
+                        if (!snap.isEmpty()) {
+                            snap.getDocuments().get(0).getReference().update("status", "success");
+                        }
+                    });
+            } else if ("rejected".equals(status)) {
+                db.collection("transactions").whereEqualTo("id", docId).limit(1).get()
+                    .addOnSuccessListener(snap -> {
+                        if (!snap.isEmpty()) {
+                            snap.getDocuments().get(0).getReference().update("status", "rejected");
+                        }
+                    });
             }
             Toast.makeText(this, "Topup " + status, Toast.LENGTH_SHORT).show();
             loadTopups();
         }).addOnFailureListener(e -> Toast.makeText(this, "Gagal memperbarui status topup", Toast.LENGTH_SHORT).show());
     }
 
-    private void updateWithdrawStatus(String docId, String status) {
+    private void updateWithdrawStatus(String docId, String uid, long amount, String status) {
         db.collection("withdraw_requests").document(docId).update("status", status).addOnSuccessListener(aVoid -> {
+            if ("rejected".equals(status)) {
+                db.collection("users").document(uid)
+                    .update("balance_wallet", com.google.firebase.firestore.FieldValue.increment(amount));
+            }
             Toast.makeText(this, "Withdraw " + status, Toast.LENGTH_SHORT).show();
             loadWithdrawals();
         }).addOnFailureListener(e -> Toast.makeText(this, "Gagal memperbarui status withdraw", Toast.LENGTH_SHORT).show());

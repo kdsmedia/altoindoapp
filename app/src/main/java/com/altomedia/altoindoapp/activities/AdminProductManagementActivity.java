@@ -141,9 +141,29 @@ public class AdminProductManagementActivity extends AppCompatActivity {
         builder.setPositiveButton("Simpan", (dialog, which) -> {
             String name = etName.getText().toString().trim();
             String description = etDesc.getText().toString().trim();
-            long price = Long.parseLong(etPrice.getText().toString().trim());
-            long discount = etDiscount.getText().toString().trim().isEmpty() ? 0 : Long.parseLong(etDiscount.getText().toString().trim());
-            double commission = etCommission.getText().toString().trim().isEmpty() ? 0 : Double.parseDouble(etCommission.getText().toString().trim());
+            if (name.isEmpty() || description.isEmpty() || etPrice.getText().toString().trim().isEmpty()) {
+                Toast.makeText(this, "Nama, deskripsi, dan harga wajib diisi", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            long price;
+            try {
+                price = Long.parseLong(etPrice.getText().toString().trim());
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Harga tidak valid", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            long discount;
+            try {
+                discount = etDiscount.getText().toString().trim().isEmpty() ? 0 : Long.parseLong(etDiscount.getText().toString().trim());
+            } catch (NumberFormatException e) {
+                discount = 0;
+            }
+            double commission;
+            try {
+                commission = etCommission.getText().toString().trim().isEmpty() ? 0 : Double.parseDouble(etCommission.getText().toString().trim());
+            } catch (NumberFormatException e) {
+                commission = 0;
+            }
             List<String> variants = new ArrayList<>();
             if (!etVariants.getText().toString().trim().isEmpty()) {
                 for (String variant : etVariants.getText().toString().trim().split(",")) {

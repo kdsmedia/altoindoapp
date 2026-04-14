@@ -177,12 +177,9 @@ public class IdCardActivity extends AppCompatActivity {
 
     private void saveCardAsImage() {
         try {
-            cardIdCard.setDrawingCacheEnabled(true);
-            cardIdCard.buildDrawingCache();
             Bitmap bmp = Bitmap.createBitmap(cardIdCard.getWidth(), cardIdCard.getHeight(), Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(bmp);
             cardIdCard.draw(canvas);
-            cardIdCard.setDrawingCacheEnabled(false);
 
             String filename = "ALTOINDO_IDCARD_" + (currentUser != null ? currentUser.member_id : "member") + ".png";
 

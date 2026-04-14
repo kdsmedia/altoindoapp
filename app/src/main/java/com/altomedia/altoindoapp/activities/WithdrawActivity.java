@@ -41,6 +41,7 @@ public class WithdrawActivity extends AppCompatActivity {
         db.collection("users").document(uid).get().addOnSuccessListener(documentSnapshot -> {
             if (documentSnapshot.exists()) {
                 User user = documentSnapshot.toObject(User.class);
+                if (user == null) return;
                 if (!user.isProfileComplete()) {
                     Toast.makeText(this, "Harap lengkapi profil dan rekening bank sebelum melakukan penarikan", Toast.LENGTH_LONG).show();
                 }

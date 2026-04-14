@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelola Bonus &amp; Komisi"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#1A237E"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etInviteBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bonus Afiliasi Undang Member (%)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etCheckinBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bonus Checkin Harian (%)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etSponsorBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bonus Kunjungi Sponsor (%)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etVideoBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bonus Tonton Video (%)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnSaveBonus"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="SIMPAN KONFIGURASI"
+                android:backgroundTint="#1A237E"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnDistributeBonus"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="DISTRIBUSIKAN BONUS AFILIASI"
+                android:backgroundTint="#2E7D32"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/adBannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFFFFF" />
+
+</LinearLayout>

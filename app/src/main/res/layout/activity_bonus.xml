@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0F1E">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_header"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:paddingBottom="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&#x1F381; Pusat Bonus"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Klaim bonus dan hadiah Anda"
+                    android:textSize="13sp"
+                    android:textColor="#AACCFF"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Banner Ad Container -->
+            <FrameLayout
+                android:id="@+id/adBannerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D1B2A"
+                android:gravity="center" />
+
+            <!-- Reward Video Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="12dp"
+                app:cardBackgroundColor="#0A2A1A">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#x1F4FA;"
+                        android:textSize="56sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bonus Video"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00E676"
+                        android:layout_marginTop="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tonton video iklan dan dapatkan bonus\nRp.10 sampai Rp.100 secara random!"
+                        android:textSize="13sp"
+                        android:textColor="#AAAAAA"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp" />
+
+                    <Button
+                        android:id="@+id/btnTonton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="&#x25B6; Tonton untuk Dapatkan Bonus"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:background="@drawable/btn_action_card" />
+
+                    <TextView
+                        android:id="@+id/tvBonusResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFD700"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bonus History Info -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#1A2744">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#x2139; Info Bonus"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#7EC8E3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#x2022; Tonton video setiap hari untuk mendapatkan bonus\n&#x2022; Bonus dikreditkan langsung ke saldo wallet\n&#x2022; Bonus bervariasi antara Rp.10 hingga Rp.100\n&#x2022; Ajak teman dan dapatkan bonus afiliasi"
+                        android:textSize="13sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View android:layout_width="match_parent" android:layout_height="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <include layout="@layout/layout_bottom_nav" />
+
+</LinearLayout>

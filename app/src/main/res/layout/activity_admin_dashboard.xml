@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin Panel"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnManageUsers"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kelola Pengguna"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnManageTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kelola Transaksi & Topup"
+            android:backgroundTint="#283593"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnManageNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kelola Notifikasi Publik"
+            android:backgroundTint="#303F9F"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnManageProducts"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kelola Produk"
+            android:backgroundTint="#3949AB"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnManageSettings"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kelola Setelan &amp; Kontak"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnManageBonus"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kelola Bonus &amp; Komisi"
+            android:backgroundTint="#5C6BC0"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnManageIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="&#x1F5A8; Kelola Cetak ID Card"
+            android:backgroundTint="#00695C"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnAdminLogout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="LOGOUT"
+            android:backgroundTint="#B71C1C"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

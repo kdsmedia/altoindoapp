@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar ALTOINDO"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Telepon"
+            android:inputType="phone"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etUplineId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID Upline / Referral (opsional)"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Rekening Penarikan:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgAccountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rbEwallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-Wallet" />
+
+            <RadioButton
+                android:id="@+id/rbBank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:layout_marginStart="24dp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ewalletSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spEwallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etEwalletOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Pemilik E-Wallet"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etEwalletNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor E-Wallet"
+                android:inputType="phone"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bankSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Bank (BCA, BRI, Mandiri, dll)"
+                android:inputType="text"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etBankOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Pemilik Rekening"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etBankAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Rekening"
+                android:inputType="number"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="DAFTAR SEKARANG"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvGoToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun? Masuk"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="ALTOINDO"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6881903056221433~7084995742" />
+
+        <activity android:name=".activities.SplashActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.LoginActivity" android:exported="false" />
+        <activity android:name=".activities.RegisterActivity" android:exported="false" />
+        <activity android:name=".activities.MainActivity" android:exported="false" />
+        <activity android:name=".activities.TransferActivity" android:exported="false" />
+        <activity android:name=".activities.TopUpActivity" android:exported="false" />
+        <activity android:name=".activities.ProductsActivity" android:exported="false" />
+        <activity android:name=".activities.ProfileActivity" android:exported="false" />
+        <activity android:name=".activities.UserProfileActivity" android:exported="false" />
+        <activity android:name=".activities.WithdrawActivity" android:exported="false" />
+        <activity android:name=".activities.NotificationsActivity" android:exported="false" />
+        <activity android:name=".activities.SettingsActivity" android:exported="false" />
+        <activity android:name=".activities.TransactionHistoryActivity" android:exported="false" />
+        <activity android:name=".activities.AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.AdminUserManagementActivity" android:exported="false" />
+        <activity android:name=".activities.AdminTransactionManagementActivity" android:exported="false" />
+        <activity android:name=".activities.AdminNotificationManagementActivity" android:exported="false" />
+        <activity android:name=".activities.AdminProductManagementActivity" android:exported="false" />
+        <activity android:name=".activities.AdminSettingsActivity" android:exported="false" />
+        <activity android:name=".activities.BonusManagementActivity" android:exported="false" />
+        <activity android:name=".activities.ScannerActivity" android:exported="false" />
+        <activity android:name=".activities.BonusActivity" android:exported="false" />
+        <activity android:name=".activities.SaldoActivity" android:exported="false" />
+        <activity android:name=".activities.RankingActivity" android:exported="false" />
+        <activity android:name=".activities.IdCardActivity" android:exported="false" />
+        <activity android:name=".activities.AdminIdCardManagementActivity" android:exported="false" />
+
+    </application>
+</manifest>

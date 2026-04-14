@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0F1E">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="&#x2190;"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="12dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#x2B07; Penarikan Saldo"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo: Rp 0"
+                android:textSize="13sp"
+                android:textColor="#AACCFF"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Minimum Warning -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#1A2A00">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#x2139;"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Minimum penarikan Rp.100.000"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#00E676" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Form Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#1A2744">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#x1F4B5; Jumlah Penarikan"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#7EC8E3"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/etAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Minimal Rp. 100.000"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#666666"
+                        android:background="@drawable/btn_action_card2"
+                        android:padding="14dp"
+                        android:layout_marginBottom="20dp"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#x1F3E6; Rekening Tujuan"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#7EC8E3"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Bank/E-Wallet"
+                        android:textSize="12sp"
+                        android:textColor="#AACCFF" />
+
+                    <EditText
+                        android:id="@+id/etBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="BCA, BRI, OVO, dll."
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#666666"
+                        android:background="@drawable/btn_action_card2"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Rekening"
+                        android:textSize="12sp"
+                        android:textColor="#AACCFF" />
+
+                    <EditText
+                        android:id="@+id/etAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nomor rekening/wallet"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#666666"
+                        android:background="@drawable/btn_action_card2"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Pemilik Rekening"
+                        android:textSize="12sp"
+                        android:textColor="#AACCFF" />
+
+                    <EditText
+                        android:id="@+id/etAccountHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama sesuai rekening"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#666666"
+                        android:background="@drawable/btn_action_card2"
+                        android:padding="12dp"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="&#x2B07; Ajukan Penarikan"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:background="@drawable/btn_action_card"
+                android:layout_marginBottom="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

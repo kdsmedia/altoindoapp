@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ALTOINDO</string>
+    <string name="welcome_msg">Selamat Datang di Altoindo</string>
+    <string-array name="account_types">
+        <item>E-Wallet</item>
+        <item>Bank</item>
+    </string-array>
+</resources>
